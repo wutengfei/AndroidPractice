@@ -1,178 +1,207 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <RadioGroup
-        android:id="@+id/rg"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:orientation="horizontal">
+        android:layout_height="wrap_content">
 
-        <RadioButton
-            android:id="@+id/rb_hu"
+
+        <RadioGroup
+            android:id="@+id/rg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_hu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layoutDirection="rtl"
+                android:text="沪市"
+                android:textDirection="ltr"
+                android:textSize="25sp" />
+
+
+            <RadioButton
+                android:id="@+id/rb_shen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layoutDirection="rtl"
+                android:text="深市"
+                android:textDirection="ltr"
+                android:textSize="25sp" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/tv_gujia"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/rg"
             android:layout_marginLeft="20dp"
-            android:layoutDirection="rtl"
-            android:text="沪市"
-            android:textDirection="ltr"
+            android:layout_marginTop="15dp"
+            android:text="股价"
             android:textSize="25sp" />
 
+        <EditText
+            android:id="@+id/et_gujia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rg"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="30dp"
+            android:layout_toRightOf="@+id/tv_gujia"
+            android:inputType="numberDecimal"
+            android:textSize="25sp" />
 
-        <RadioButton
-            android:id="@+id/rb_shen"
+        <TextView
+            android:id="@+id/tv_peishoue"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_gujia"
             android:layout_marginLeft="20dp"
-            android:layoutDirection="rtl"
-            android:text="深市"
-            android:textDirection="ltr"
+            android:layout_marginTop="35dp"
+            android:text="每股配售额"
             android:textSize="25sp" />
-    </RadioGroup>
 
-    <TextView
-        android:id="@+id/tv_gujia"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/rg"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="15dp"
-        android:text="股价"
-        android:textSize="25sp" />
+        <EditText
+            android:id="@+id/et_peishoue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/et_gujia"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginRight="30dp"
+            android:layout_toRightOf="@+id/tv_peishoue"
+            android:inputType="numberDecimal"
+            android:text=""
+            android:textSize="25sp" />
 
-    <EditText
-        android:id="@+id/et_gujia"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/rg"
-        android:layout_marginLeft="0dp"
-        android:layout_marginTop="5dp"
-        android:inputType="numberDecimal"
-        android:layout_marginRight="30dp"
-        android:layout_toRightOf="@+id/tv_gujia"
-        android:textSize="25sp" />
+        <TextView
+            android:id="@+id/tv_shizhi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_peishoue"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="35dp"
+            android:text="所需市值"
+            android:textSize="25sp" />
 
-    <TextView
-        android:id="@+id/tv_peishoue"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tv_gujia"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="35dp"
-        android:text="每股配售额"
-        android:textSize="25sp" />
+        <EditText
+            android:id="@+id/et_shizhi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_peishoue"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginRight="30dp"
+            android:layout_toRightOf="@+id/tv_shizhi"
+            android:inputType="numberDecimal"
+            android:text=""
+            android:textSize="25sp" />
 
-    <EditText
-        android:id="@+id/et_peishoue"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/et_gujia"
-        android:layout_marginLeft="0dp"
-        android:inputType="numberDecimal"
-        android:layout_marginTop="13dp"
-        android:layout_marginRight="30dp"
-        android:layout_toRightOf="@+id/tv_peishoue"
-        android:text=""
-        android:textSize="25sp" />
+        <TextView
+            android:id="@+id/tv_gushu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_shizhi"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="35dp"
+            android:text="所需股数"
+            android:textSize="25sp" />
 
-    <TextView
-        android:id="@+id/tv_shizhi"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tv_peishoue"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="35dp"
-        android:text="所需市值"
-        android:textSize="25sp" />
+        <EditText
+            android:id="@+id/et_gushu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/et_shizhi"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="11dp"
+            android:layout_marginRight="30dp"
+            android:layout_toRightOf="@+id/tv_shizhi"
+            android:inputType="numberDecimal"
+            android:text=""
+            android:textSize="25sp" />
 
-    <EditText
-        android:id="@+id/et_shizhi"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tv_peishoue"
-        android:layout_marginLeft="0dp"
-        android:layout_marginTop="24dp"
-        android:inputType="numberDecimal"
-        android:layout_marginRight="30dp"
-        android:layout_toRightOf="@+id/tv_shizhi"
-        android:text=""
-        android:textSize="25sp" />
+        <TextView
+            android:id="@+id/tv_diefu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_gushu"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="35dp"
+            android:text="跌幅"
+            android:textSize="25sp" />
 
-    <TextView
-        android:id="@+id/tv_diefu"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tv_shizhi"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="35dp"
-        android:text="跌幅"
-        android:textSize="25sp" />
+        <EditText
+            android:id="@+id/et_diefu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/et_gushu"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="17dp"
+            android:layout_marginRight="30dp"
+            android:layout_toRightOf="@+id/tv_diefu"
+            android:hint="%"
+            android:inputType="numberDecimal"
+            android:textAlignment="textEnd"
+            android:textSize="25sp" />
 
-    <EditText
-        android:id="@+id/et_diefu"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tv_shizhi"
-        android:layout_marginLeft="1dp"
-        android:layout_marginTop="23dp"
-        android:layout_marginRight="30dp"
-        android:layout_toRightOf="@+id/tv_diefu"
-        android:hint="%"
-        android:inputType="numberDecimal"
-        android:textAlignment="textEnd"
-        android:textSize="25sp" />
+        <TextView
+            android:id="@+id/tv_dieliang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_diefu"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="35dp"
+            android:text="跌量"
+            android:textSize="25sp" />
 
-    <TextView
-        android:id="@+id/tv_dieliang"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tv_diefu"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="35dp"
-        android:text="跌量"
-        android:textSize="25sp" />
+        <EditText
+            android:id="@+id/et_dieliang"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_diefu"
+            android:layout_marginLeft="1dp"
+            android:layout_marginTop="23dp"
+            android:layout_marginRight="30dp"
+            android:layout_toRightOf="@+id/tv_diefu"
+            android:inputType="numberDecimal"
+            android:textSize="25sp" />
 
-    <EditText
-        android:id="@+id/et_dieliang"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tv_diefu"
-        android:layout_marginLeft="1dp"
-        android:layout_marginTop="23dp"
-        android:layout_marginRight="30dp"
-        android:inputType="numberDecimal"
-        android:layout_toRightOf="@+id/tv_diefu"
-        android:textSize="25sp" />
+        <Button
+            android:id="@+id/calculate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_dieliang"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:backgroundTint="@color/colorAccent"
+            android:onClick="calculator"
+            android:text="计   算"
+            android:textColor="#ff0df7f0"
+            android:textSize="25sp" />
 
-    <Button
-        android:id="@+id/calculate"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/tv_dieliang"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:backgroundTint="@color/colorAccent"
-        android:text="计   算"
-        android:onClick="calculator"
-        android:textColor="#ff0df7f0"
-        android:textSize="25sp" />
-
-    <Button
-        android:id="@+id/clear"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/calculate"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:backgroundTint="@color/colorAccent"
-        android:text="清   屏"
-        android:onClick="clear"
-        android:textColor="#ff0df7f0"
-        android:textSize="25sp" />
-</RelativeLayout>
+        <Button
+            android:id="@+id/clear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/calculate"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:backgroundTint="@color/colorAccent"
+            android:onClick="clear"
+            android:text="清   屏"
+            android:textColor="#ff0df7f0"
+            android:textSize="25sp" />
+    </RelativeLayout>
+</ScrollView>

@@ -11,7 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    private EditText guJia, peiShouE, shiZhi, dieFu, dieLiang;
+    private EditText guJia, peiShouE, shiZhi, dieFu, dieLiang, gushu;
     private RadioButton rb_huShi, rb_shenShi;
 
     @Override
@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
         dieLiang = findViewById(R.id.et_dieliang);
         rb_huShi = findViewById(R.id.rb_hu);
         rb_shenShi = findViewById(R.id.rb_shen);
+        gushu = findViewById(R.id.et_gushu);
     }
 
     public void calculator(View view) {
@@ -48,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
 
             double guNumber = Math.ceil(aboutGuNumber / 100) * 100;
             mShiZhi = guNumber * mGuJia;
+            gushu.setText(String.format("%.0f", guNumber));
             shiZhi.setText(String.format("%.2f", mShiZhi));
             if (!TextUtils.isEmpty(dieFu.getText())) {
                 mDieFu = Double.parseDouble(dieFu.getText().toString().trim()) / 100;
@@ -65,6 +67,7 @@ public class MainActivity extends AppCompatActivity {
         peiShouE.setText("");
         shiZhi.setText("");
         dieFu.setText("");
+        gushu.setText("");
         dieLiang.setText("");
     }
 }
