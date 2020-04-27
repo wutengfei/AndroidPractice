@@ -22,4 +22,8 @@ public class MainActivity extends AppCompatActivity {
     private void hello() {
         System.out.println("hello");
     }
+
+    private void dev() {
+        System.out.println("dev");
+    }
 }
