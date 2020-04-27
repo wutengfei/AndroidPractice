@@ -15,5 +15,8 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    private void something() {
+        System.out.println("dev003");
+    }
 
 }
