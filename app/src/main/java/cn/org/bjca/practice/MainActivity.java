@@ -12,7 +12,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         System.out.println("这是master");
         System.out.println("this is master001");
-        System.out.println("this is dev 002");
+
     }
 
 
