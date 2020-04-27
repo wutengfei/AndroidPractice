@@ -11,6 +11,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         System.out.println("这是master");
+        System.out.println("this is master001");
     }
 
 
