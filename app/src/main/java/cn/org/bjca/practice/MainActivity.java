@@ -10,8 +10,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        System.out.println("这是dev");
-        System.out.println("添加dev001");
+        System.out.println("这是master");
+        System.out.println("this is master001");
     }
 
 
