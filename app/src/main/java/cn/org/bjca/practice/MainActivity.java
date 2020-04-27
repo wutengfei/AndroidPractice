@@ -19,4 +19,7 @@ public class MainActivity extends AppCompatActivity {
         System.out.println("dev003");
     }
 
+    private void hello() {
+        System.out.println("hello");
+    }
 }
