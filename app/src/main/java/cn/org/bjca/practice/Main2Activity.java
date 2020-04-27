@@ -16,4 +16,8 @@ public class Main2Activity extends AppCompatActivity {
     private void main2Master() {
         System.out.println("hello");
     }
+
+    private void main2Master001() {
+        System.out.println("hello001");
+    }
 }
