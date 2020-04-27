@@ -12,4 +12,8 @@ public class Main2Activity extends AppCompatActivity {
         setContentView(R.layout.activity_main2);
         System.out.println("main2 add master003");
     }
+
+    private void main2Master() {
+        System.out.println("hello");
+    }
 }
