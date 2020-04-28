@@ -31,14 +31,6 @@ public class MainActivity extends AppCompatActivity {
         System.out.println("this is fun01");
     }
 
-    private void fun02() {
-        System.out.println("this is fun02");
-    }
-
-    private void fun03() {
-        System.out.println("this is fun03");
-    }
-
     private void fun04() {
         System.out.println("this is fun04");
     }
