@@ -24,4 +24,7 @@ public class MainActivity extends AppCompatActivity {
         System.out.println("this is fun04");
     }
 
+    private void fun05() {
+        System.out.println("this is fun05");
+    }
 }
