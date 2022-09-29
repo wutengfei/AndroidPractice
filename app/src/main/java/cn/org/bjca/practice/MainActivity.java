@@ -10,20 +10,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        System.out.println("这是master");
-        System.out.println("this is master001");
-
-    }
-
-    private void something() {
-        System.out.println("dev003");
-    }
-
-    private void newFun01() {
-        System.out.println("新方法");
-    }
-
-    private void fun05() {
-        System.out.println("this is fun05");
+        Student student = new Student();
+        student.setAge(10);
+        student.setName("");
+        MClass mClass = new MClass();
+        mClass.setBanji("1班");
+        mClass.setStudent(student);
+        String s = JsonUtil.object2Json(mClass);
+        System.out.println(s);
     }
 }
