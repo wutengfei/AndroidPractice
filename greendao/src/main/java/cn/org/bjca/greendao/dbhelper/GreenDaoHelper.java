@@ -41,8 +41,8 @@ public class GreenDaoHelper {
         userBeanDao.deleteAll();
     }
 
-    public void deleteUserById(Long id) {
-//        userBeanDao.deleteByKey(id);
+    public void deleteUserById(String id) {
+        userBeanDao.deleteByKey(id);
     }
 
     public void update(UserBean userBean) {

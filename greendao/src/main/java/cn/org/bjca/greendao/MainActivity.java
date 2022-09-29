@@ -35,12 +35,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void btnDelete(View view) {
-        List<UserBean> query = greenDaoHelper.query("2");
-        if (query != null)
-            for (int i = 0; i < query.size(); i++) {
-                greenDaoHelper.deleteUser(query.get(i));
-            }
-
+//        List<UserBean> query = greenDaoHelper.query("2");
+//        if (query != null)
+//            for (int i = 0; i < query.size(); i++) {
+//                greenDaoHelper.deleteUser(query.get(i));
+//            }
+        greenDaoHelper.deleteUserById("2");
         queryAll();
     }
 
